@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  hive-server:
+    build: .
+    ports:
+      - "10000:10000"
+      - "9083:9083"
+    links:
+      - "postgres:postgres"
+  postgres:
+    image: postgres:10
+    environment:
+      - POSTGRES_USER=hive
+      - POSTGRES_DB=metastore
