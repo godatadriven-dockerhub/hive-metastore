@@ -1,6 +1,6 @@
 # hive-metastore
 
-Simple Hive metastore to run some CI tests.
+Simple Hive metastore and Spark to run CI tests.
 
 ## Run it local using Beeline
 
