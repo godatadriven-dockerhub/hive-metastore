@@ -1,13 +1,24 @@
 version: "3"
 
 services:
-  hive-server:
+  hive:
     build: .
+    entrypoint: /init-hive.sh
     ports:
-      - "10000:10000"
       - "9083:9083"
+      - "10000:10000"
     links:
       - "postgres:postgres"
+
+  spark:
+    build: .
+    entrypoint: /init-spark.sh
+    ports:
+      - "10001:10001"
+    links:
+      - "postgres:postgres"
+      - "hive:hive"
+
   postgres:
     image: postgres:10
     environment:

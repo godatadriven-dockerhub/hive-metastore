@@ -1,7 +1,7 @@
 <configuration>
   <property>
     <name>hive.metastore.uris</name>
-    <value>thrift://localhost:9083</value>
+    <value>thrift://hive:9083</value>
   </property>
   <property>
     <name>hive.metastore.client.socket.timeout</name>
@@ -37,4 +37,28 @@
     <name>hive.metastore.event.db.notification.api.auth</name>
     <value>false</value>
   </property>
+
+
+
+  <property>
+    <name>spark.sql.hive.metastore.version</name>
+    <value>2.3.3</value>
+  </property>
+  <property>
+    <name>hive.server2.transport.mode</name>
+    <value>http</value>
+  </property>
+    <property>
+      <name>hive.server2.transport.mode</name>
+      <value>http</value>
+    </property>
+  <property>
+    <name>hive.server2.thrift.http.port</name>
+    <value>10001</value>
+  </property>
+  <property>
+    <name>hive.server2.http.endpoint</name>
+    <value>cliservice</value>
+  </property>
+
 </configuration>
