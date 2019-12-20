@@ -1,6 +1,6 @@
 FROM openjdk:8-jre
 
-RUN apt-get update && apt-get install -y libpostgresql-jdbc-java procps && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y libpostgresql-jdbc-java procps libsasl2-modules libsasl2-dev && rm -rf /var/lib/apt/lists/*
 
 # Install Apache Hadoop
 ENV HADOOP_VERSION=2.7.2

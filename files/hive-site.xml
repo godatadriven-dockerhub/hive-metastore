@@ -39,6 +39,10 @@
   </property>
 
   <property>
+    <name>spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation</name>
+    <value>true</value>
+  </property>
+  <property>
     <name>spark.sql.hive.metastore.version</name>
     <value>2.3.3</value>
   </property>
