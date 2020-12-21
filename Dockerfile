@@ -3,7 +3,7 @@ FROM openjdk:8-jre
 RUN apt-get update && apt-get install -y libpostgresql-jdbc-java procps libsasl2-modules libsasl2-dev && rm -rf /var/lib/apt/lists/*
 
 # Install Apache Hadoop
-ENV HADOOP_VERSION=2.7.2
+ENV HADOOP_VERSION=2.7.4
 ENV HADOOP_HOME /opt/hadoop-$HADOOP_VERSION
 ENV HADOOP_CONF_DIR=$HADOOP_HOME/conf
 ENV PATH $PATH:$HADOOP_HOME/bin
@@ -18,7 +18,7 @@ RUN curl -L \
   && chmod 777 $HADOOP_HOME/logs
 
 # Install Apache Hive
-ENV HIVE_VERSION=2.3.3
+ENV HIVE_VERSION=2.3.7
 ENV HIVE_HOME=/opt/apache-hive-$HIVE_VERSION-bin
 ENV HIVE_CONF_DIR=$HIVE_HOME/conf
 ENV PATH $PATH:$HIVE_HOME/bin

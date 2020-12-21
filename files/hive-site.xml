@@ -9,7 +9,7 @@
   </property>
   <property>
       <name>hive.metastore.warehouse.dir</name>
-      <value>/data/hive/warehouse</value>
+      <value>/tmp/</value>
   </property>
   <property>
     <name>javax.jdo.option.ConnectionURL</name>

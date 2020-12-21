@@ -23,4 +23,5 @@ services:
     image: postgres:10
     environment:
       - POSTGRES_USER=hive
+      - POSTGRES_PASSWORD=hive
       - POSTGRES_DB=metastore
